@@ -1,8 +1,10 @@
-import dependencies.ArchitectureComponents
+import dependencies.*
 
 apply plugin: 'com.android.application'
 
 apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-kapt'
 
 apply plugin: 'kotlin-android-extensions'
 
@@ -10,8 +12,8 @@ android {
     compileSdkVersion 29
     buildToolsVersion "29.0.2"
     defaultConfig {
-        applicationId "tech.michalik.myapplication"
-        minSdkVersion 21
+        applicationId "tech.michalik.cryptolist"
+        minSdkVersion 24
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
@@ -23,6 +25,15 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    dataBinding {
+        enabled = true
+    }
+
+    testOptions {
+        unitTests.all {
+            useJUnitPlatform()
+        }
+    }
 }
 
 import dependencies.*
@@ -32,5 +43,11 @@ dependencies {
 
     implementation ArchitectureComponents.all
     implementation 'com.github.rozkminiacz.MVX:mvx:-SNAPSHOT'
+    implementation DI.all
+    implementation Rx.all
+    implementation Network.all
+    implementation Utils.timber
+    implementation Utils.time
 
+    testImplementation UnitTests.all
 }
