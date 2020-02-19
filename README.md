@@ -8,8 +8,10 @@ Projects is not using any specific clean architecture approach, but isntead trie
 
 Custom views are extending some base and support view classes.
 
+I am not using Dagger or any dependency injection framework - dependencies are provided to classes manually.
+
 Databinding is used in each where view properties must be modified.
 
-Tests are created with KotlinTest, Mockito-Kotlin.
+Tests are created with KotlinTest, Mockito-Kotlin. 
 
 ![Demo GIF](demo.gif)
