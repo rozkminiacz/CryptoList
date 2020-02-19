@@ -1,4 +1,4 @@
-package tech.michalik.cryptolist
+package tech.michalik.cryptolist.screen
 
 enum class SortType {
     NAME,

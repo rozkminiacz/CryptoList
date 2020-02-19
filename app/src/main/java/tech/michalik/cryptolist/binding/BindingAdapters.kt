@@ -14,9 +14,9 @@ import androidx.databinding.InverseBindingAdapter
 import androidx.databinding.InverseBindingListener
 import org.joda.time.DateTime
 import org.joda.time.format.DateTimeFormat
-import tech.michalik.cryptolist.ChangeIndicationTextView
-import tech.michalik.cryptolist.CurrencyDisplayable
-import tech.michalik.cryptolist.CurrencyList
+import tech.michalik.cryptolist.views.ChangeIndicationTextView
+import tech.michalik.cryptolist.screen.CurrencyDisplayable
+import tech.michalik.cryptolist.views.CurrencyList
 import tech.michalik.cryptolist.binding.SpinnerExtensions.getSpinnerValue
 import tech.michalik.cryptolist.binding.SpinnerExtensions.setSpinnerEntries
 import tech.michalik.cryptolist.binding.SpinnerExtensions.setSpinnerInverseBindingListener

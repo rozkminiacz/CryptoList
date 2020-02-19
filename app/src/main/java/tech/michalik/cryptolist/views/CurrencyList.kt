@@ -1,4 +1,4 @@
-package tech.michalik.cryptolist
+package tech.michalik.cryptolist.views
 
 import android.content.Context
 import android.util.AttributeSet
@@ -7,6 +7,8 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import tech.michalik.cryptolist.BR
+import tech.michalik.cryptolist.screen.CurrencyDisplayable
 import tech.michalik.cryptolist.binding.BindableViewHolder
 import tech.michalik.cryptolist.databinding.SingleCurrencyItemBinding
 
@@ -39,7 +41,12 @@ class CurrencyAdapter : RecyclerView.Adapter<CurrencyAdapter.CurrencyViewHolder>
     var items: List<CurrencyDisplayable> = emptyList()
         set(value) {
             val result =
-                DiffUtil.calculateDiff(CurrencyDisplayableListDiffUtilCallback(field, value))
+                DiffUtil.calculateDiff(
+                    CurrencyDisplayableListDiffUtilCallback(
+                        field,
+                        value
+                    )
+                )
             field = value
             result.dispatchUpdatesTo(this)
         }

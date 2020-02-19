@@ -7,12 +7,18 @@ import io.kotlintest.matchers.collections.shouldContainExactlyInAnyOrder
 import io.kotlintest.shouldBe
 import io.kotlintest.specs.BehaviorSpec
 import io.reactivex.subjects.BehaviorSubject
+import tech.michalik.cryptolist.network.CurrencyDto
+import tech.michalik.cryptolist.screen.CurrencyDtoToDisplayableMapper
+import tech.michalik.cryptolist.screen.SortType
+import tech.michalik.cryptolist.utilities.RxResult
+import tech.michalik.cryptolist.utilities.mapAll
 import kotlin.random.Random
 
 class CryptoListViewModelBehaviorSpec : BehaviorSpec({
     Given("data is emited without errors") {
 
-        val mapper = DtoToDisplayableMapper()
+        val mapper =
+            CurrencyDtoToDisplayableMapper()
 
         val dataSourceSubject = BehaviorSubject.create<RxResult<List<CurrencyDto>>>()
 

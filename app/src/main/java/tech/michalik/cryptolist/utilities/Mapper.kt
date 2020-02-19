@@ -1,4 +1,4 @@
-package tech.michalik.cryptolist
+package tech.michalik.cryptolist.utilities
 
 interface Mapper<From, To> {
     fun map(from: From): To

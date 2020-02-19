@@ -1,4 +1,4 @@
-package tech.michalik.cryptolist
+package tech.michalik.cryptolist.screen
 
 data class CurrencyDisplayable(
     val name: String,

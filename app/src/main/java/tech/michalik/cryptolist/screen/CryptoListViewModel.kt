@@ -1,15 +1,21 @@
-package tech.michalik.cryptolist
+package tech.michalik.cryptolist.screen
 
 import androidx.databinding.Bindable
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.rxkotlin.addTo
 import io.reactivex.rxkotlin.subscribeBy
 import org.joda.time.DateTime
+import tech.michalik.cryptolist.BR
+import tech.michalik.cryptolist.network.CurrencyDto
+import tech.michalik.cryptolist.usecase.ObserveCurrencyStreamUseCase
+import tech.michalik.cryptolist.utilities.Mapper
+import tech.michalik.cryptolist.utilities.RxResult
+import tech.michalik.cryptolist.utilities.SchedulerProvider
+import tech.michalik.cryptolist.utilities.mapAll
 import tech.michalik.mvx.BaseViewModel
 import tech.michalik.mvx.observable
 import tech.michalik.mvx.onChange
 import timber.log.Timber
-import java.util.*
 
 /**
  * Created by jaroslawmichalik on 17/02/2020

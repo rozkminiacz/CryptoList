@@ -1,11 +1,10 @@
-package tech.michalik.cryptolist
+package tech.michalik.cryptolist.screen
 
-import androidx.lifecycle.ViewModel
-import io.reactivex.Scheduler
-import io.reactivex.android.schedulers.AndroidSchedulers
-import io.reactivex.schedulers.Schedulers
+import tech.michalik.cryptolist.BR
+import tech.michalik.cryptolist.R
 import tech.michalik.cryptolist.databinding.CryptoListScreenBinding
 import tech.michalik.cryptolist.network.NetworkModule
+import tech.michalik.cryptolist.utilities.AndroidSchedulerProvider
 import tech.michalik.mvx.GenericViewModelProviderFactory
 import tech.michalik.mvx.MvvmActivity
 import javax.inject.Provider
@@ -21,7 +20,8 @@ class CryptoListScreen : MvvmActivity<CryptoListViewModel, CryptoListScreenBindi
 ) {
     override fun inject() {
         viewModelProvider = GenericViewModelProviderFactory(Provider {
-            val schedulerProvider = AndroidSchedulerProvider()
+            val schedulerProvider =
+                AndroidSchedulerProvider()
             CryptoListViewModel(
                 observeCurrencyStreamUseCase = ObserveCurrencyStreamUseCaseImpl(
                     networkService = NetworkModule().networkService,
@@ -29,17 +29,8 @@ class CryptoListScreen : MvvmActivity<CryptoListViewModel, CryptoListScreenBindi
                 ),
                 schedulerProvider = schedulerProvider,
                 sortCurrencyDisplayableUseCase = SortCurrencyDisplayableUseCaseImpl(),
-                dtoToDisplayableMapper = DtoToDisplayableMapper()
+                dtoToDisplayableMapper = CurrencyDtoToDisplayableMapper()
             )
         })
     }
-}
-
-class AndroidSchedulerProvider : SchedulerProvider {
-    override val main: Scheduler
-        get() = AndroidSchedulers.mainThread()
-    override val io: Scheduler
-        get() = Schedulers.io()
-    override val single: Scheduler
-        get() = Schedulers.single()
 }

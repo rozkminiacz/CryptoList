@@ -1,6 +1,9 @@
-package tech.michalik.cryptolist
+package tech.michalik.cryptolist.screen
 
-class DtoToDisplayableMapper :
+import tech.michalik.cryptolist.network.CurrencyDto
+import tech.michalik.cryptolist.utilities.Mapper
+
+class CurrencyDtoToDisplayableMapper :
     Mapper<CurrencyDto, CurrencyDisplayable> {
     override fun map(from: CurrencyDto): CurrencyDisplayable {
         return CurrencyDisplayable(

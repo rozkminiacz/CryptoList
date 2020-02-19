@@ -7,7 +7,7 @@
 
         <variable
             name="displayable"
-            type="tech.michalik.cryptolist.CurrencyDisplayable" />
+            type="tech.michalik.cryptolist.screen.CurrencyDisplayable" />
     </data>
 
 
@@ -96,7 +96,7 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/crypto_dollar_price_label" />
 
-                <tech.michalik.cryptolist.ChangeIndicationTextView
+                <tech.michalik.cryptolist.views.ChangeIndicationTextView
                     android:id="@+id/crypto_change_1h_value"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -115,7 +115,7 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/crypto_change_1h_label" />
 
-                <tech.michalik.cryptolist.ChangeIndicationTextView
+                <tech.michalik.cryptolist.views.ChangeIndicationTextView
                     android:id="@+id/crypto_change_24h_value"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

@@ -1,7 +1,11 @@
-package tech.michalik.cryptolist
+package tech.michalik.cryptolist.screen
 
 import io.reactivex.Flowable
+import tech.michalik.cryptolist.network.CurrencyDto
 import tech.michalik.cryptolist.network.NetworkService
+import tech.michalik.cryptolist.usecase.ObserveCurrencyStreamUseCase
+import tech.michalik.cryptolist.utilities.RxResult
+import tech.michalik.cryptolist.utilities.SchedulerProvider
 import java.util.concurrent.TimeUnit
 
 class ObserveCurrencyStreamUseCaseImpl(

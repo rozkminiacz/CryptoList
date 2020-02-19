@@ -9,6 +9,11 @@ import io.kotlintest.specs.StringSpec
 import io.reactivex.Scheduler
 import io.reactivex.schedulers.Schedulers
 import io.reactivex.subjects.BehaviorSubject
+import tech.michalik.cryptolist.network.CurrencyDto
+import tech.michalik.cryptolist.screen.*
+import tech.michalik.cryptolist.usecase.ObserveCurrencyStreamUseCase
+import tech.michalik.cryptolist.utilities.RxResult
+import tech.michalik.cryptolist.utilities.SchedulerProvider
 
 /**
  * Created by jaroslawmichalik on 17/02/2020
@@ -118,12 +123,13 @@ fun createViewModel(
     sortCurrencyDisplayableUseCase: SortCurrencyDisplayableUseCase = SortCurrencyDisplayableUseCaseImpl()
 ) = CryptoListViewModel(
     observeCurrencyStreamUseCase = observeCurrencyStreamUseCase,
-    dtoToDisplayableMapper = DtoToDisplayableMapper(),
+    dtoToDisplayableMapper = CurrencyDtoToDisplayableMapper(),
     sortCurrencyDisplayableUseCase = sortCurrencyDisplayableUseCase,
     schedulerProvider = TestSchedulerProviderTrampoline()
 )
 
-class TestSchedulerProviderTrampoline : SchedulerProvider {
+class TestSchedulerProviderTrampoline :
+    SchedulerProvider {
     override val main: Scheduler
         get() = Schedulers.trampoline()
     override val io: Scheduler

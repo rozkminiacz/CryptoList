@@ -1,5 +1,7 @@
 package tech.michalik.cryptolist
 
+import tech.michalik.cryptolist.network.CurrencyDto
+
 /**
  * Created by jaroslawmichalik on 17/02/2020
  */

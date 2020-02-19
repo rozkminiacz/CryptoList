@@ -1,4 +1,4 @@
-package tech.michalik.cryptolist
+package tech.michalik.cryptolist.network
 
 import com.google.gson.annotations.SerializedName
 

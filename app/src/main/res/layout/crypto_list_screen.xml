@@ -6,7 +6,7 @@
     <data>
         <variable
             name="viewModel"
-            type="tech.michalik.cryptolist.CryptoListViewModel" />
+            type="tech.michalik.cryptolist.screen.CryptoListViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -68,7 +68,7 @@
 
         </androidx.appcompat.widget.Toolbar>
 
-        <tech.michalik.cryptolist.CurrencyList
+        <tech.michalik.cryptolist.views.CurrencyList
             android:layout_width="0dp"
             android:layout_height="0dp"
             bind:items="@{viewModel.currencyList}"

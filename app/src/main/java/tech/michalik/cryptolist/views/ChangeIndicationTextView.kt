@@ -1,9 +1,10 @@
-package tech.michalik.cryptolist
+package tech.michalik.cryptolist.views
 
 import android.content.Context
 import android.util.AttributeSet
 import androidx.appcompat.widget.AppCompatTextView
 import androidx.core.content.ContextCompat
+import tech.michalik.cryptolist.R
 
 /**
  * Created by jaroslawmichalik on 18/02/2020

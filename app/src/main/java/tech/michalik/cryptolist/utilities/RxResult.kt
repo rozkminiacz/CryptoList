@@ -1,4 +1,4 @@
-package tech.michalik.cryptolist
+package tech.michalik.cryptolist.utilities
 
 sealed class RxResult<T> {
     data class Success<T>(val value: T) : RxResult<T>()

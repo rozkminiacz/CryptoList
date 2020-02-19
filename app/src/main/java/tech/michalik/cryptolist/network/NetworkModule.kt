@@ -1,15 +1,11 @@
 package tech.michalik.cryptolist.network
 
 import com.google.gson.Gson
-import com.google.gson.annotations.SerializedName
-import io.reactivex.Single
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
-import retrofit2.http.GET
-import tech.michalik.cryptolist.CurrencyDto
 import timber.log.Timber
 
 /**
@@ -43,12 +39,3 @@ class NetworkModule {
     }
 }
 
-interface NetworkService {
-    @GET("tickers/?limit=20")
-    fun getTickers(): Single<Wrapper>
-}
-
-data class Wrapper(
-    @SerializedName("data")
-    val data: List<CurrencyDto>
-)

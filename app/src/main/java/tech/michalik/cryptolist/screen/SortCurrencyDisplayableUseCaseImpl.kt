@@ -1,8 +1,9 @@
-package tech.michalik.cryptolist
+package tech.michalik.cryptolist.screen
 
-import tech.michalik.cryptolist.SortType.*
+import tech.michalik.cryptolist.screen.SortType.*
 
-class SortCurrencyDisplayableUseCaseImpl : SortCurrencyDisplayableUseCase {
+class SortCurrencyDisplayableUseCaseImpl :
+    SortCurrencyDisplayableUseCase {
     override fun execute(
         list: List<CurrencyDisplayable>,
         sortType: SortType
