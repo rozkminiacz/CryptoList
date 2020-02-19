@@ -8,6 +8,7 @@ import org.joda.time.DateTime
 import tech.michalik.cryptolist.BR
 import tech.michalik.cryptolist.network.CurrencyDto
 import tech.michalik.cryptolist.usecase.ObserveCurrencyStreamUseCase
+import tech.michalik.cryptolist.usecase.SortCurrencyDisplayableUseCase
 import tech.michalik.cryptolist.utilities.Mapper
 import tech.michalik.cryptolist.utilities.RxResult
 import tech.michalik.cryptolist.utilities.SchedulerProvider

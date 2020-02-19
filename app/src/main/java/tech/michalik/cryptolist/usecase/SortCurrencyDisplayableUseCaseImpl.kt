@@ -1,5 +1,7 @@
-package tech.michalik.cryptolist.screen
+package tech.michalik.cryptolist.usecase
 
+import tech.michalik.cryptolist.screen.CurrencyDisplayable
+import tech.michalik.cryptolist.screen.SortType
 import tech.michalik.cryptolist.screen.SortType.*
 
 class SortCurrencyDisplayableUseCaseImpl :

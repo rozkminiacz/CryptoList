@@ -4,6 +4,8 @@ import tech.michalik.cryptolist.BR
 import tech.michalik.cryptolist.R
 import tech.michalik.cryptolist.databinding.CryptoListScreenBinding
 import tech.michalik.cryptolist.network.NetworkModule
+import tech.michalik.cryptolist.usecase.ObserveCurrencyStreamUseCaseImpl
+import tech.michalik.cryptolist.usecase.SortCurrencyDisplayableUseCaseImpl
 import tech.michalik.cryptolist.utilities.AndroidSchedulerProvider
 import tech.michalik.mvx.GenericViewModelProviderFactory
 import tech.michalik.mvx.MvvmActivity
@@ -20,8 +22,7 @@ class CryptoListScreen : MvvmActivity<CryptoListViewModel, CryptoListScreenBindi
 ) {
     override fun inject() {
         viewModelProvider = GenericViewModelProviderFactory(Provider {
-            val schedulerProvider =
-                AndroidSchedulerProvider()
+            val schedulerProvider = AndroidSchedulerProvider()
             CryptoListViewModel(
                 observeCurrencyStreamUseCase = ObserveCurrencyStreamUseCaseImpl(
                     networkService = NetworkModule().networkService,

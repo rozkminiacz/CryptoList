@@ -7,7 +7,7 @@ import io.reactivex.Single
 import io.reactivex.schedulers.TestScheduler
 import tech.michalik.cryptolist.network.NetworkService
 import tech.michalik.cryptolist.network.Wrapper
-import tech.michalik.cryptolist.screen.ObserveCurrencyStreamUseCaseImpl
+import tech.michalik.cryptolist.usecase.ObserveCurrencyStreamUseCaseImpl
 import tech.michalik.cryptolist.utilities.RxResult
 import tech.michalik.cryptolist.utilities.SchedulerProvider
 import java.util.concurrent.TimeUnit

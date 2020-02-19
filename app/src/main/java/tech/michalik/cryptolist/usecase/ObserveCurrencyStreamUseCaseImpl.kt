@@ -1,4 +1,4 @@
-package tech.michalik.cryptolist.screen
+package tech.michalik.cryptolist.usecase
 
 import io.reactivex.Flowable
 import tech.michalik.cryptolist.network.CurrencyDto

@@ -1,9 +1,9 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">CryptoList</string>
     <string name="last_update">Last update</string>
     <string name="crypto_label_volume">Volume</string>
     <string name="crypto_label_dollar_price">Dollar price</string>
     <string name="crypto_change_1h">1h</string>
     <string name="crypto_change_24h">24h</string>
-    <string name="error">Error occured</string>
+    <string name="error">Error occurred</string>
 </resources>
