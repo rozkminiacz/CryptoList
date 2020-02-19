@@ -61,7 +61,7 @@ class CryptoListViewModel(
             currencyList = sortCurrencyDisplayableUseCase.execute(currencyList, sortType)
         }
 
-        observeCurrencyStreamUseCase.execute(fetchIntervalSeconds = 5)
+        observeCurrencyStreamUseCase.execute(fetchIntervalSeconds = 30)
             .subscribeOn(schedulerProvider.io)
             .observeOn(schedulerProvider.main)
             .subscribeBy(

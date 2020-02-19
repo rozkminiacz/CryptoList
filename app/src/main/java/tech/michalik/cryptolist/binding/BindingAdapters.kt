@@ -75,6 +75,11 @@ class TextViewBindings {
             visibility = GONE
         }
     }
+
+    @BindingAdapter("bind:bindDollar")
+    fun TextView.bindDollar(value: Double) {
+        text = "$value$"
+    }
 }
 
 @BindingAdapter("bind:visible")

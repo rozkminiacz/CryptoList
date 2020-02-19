@@ -17,7 +17,7 @@ class ChangeIndicationTextView @JvmOverloads constructor(
         this.text = "$value%"
         val (color, drawable) = colorAndDrawableForValue(value)
         this.setTextColor(color)
-        this.setCompoundDrawablesWithIntrinsicBounds(drawable, 0, 0, 0)
+        this.setCompoundDrawablesWithIntrinsicBounds(0, 0, drawable, 0)
     }
 
     private fun colorAndDrawableForValue(value: Double): Pair<Int, Int> {
