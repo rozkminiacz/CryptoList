@@ -15,19 +15,20 @@ class ChangeIndicationTextView @JvmOverloads constructor(
 ) : AppCompatTextView(context, attrs, defStyleAttr) {
     fun setValue(value: Double) {
         this.text = "$value%"
-        this.setTextColor(colorForValue(value))
+        val (color, drawable) = colorAndDrawableForValue(value)
+        this.setTextColor(color)
+        this.setCompoundDrawablesWithIntrinsicBounds(drawable, 0, 0, 0)
     }
 
-    private fun colorForValue(value: Double): Int {
-        val colorResource = when {
+    private fun colorAndDrawableForValue(value: Double): Pair<Int, Int> {
+        return when {
             value > 0 -> {
-                R.color.darkGreen
+                R.color.darkGreen to R.drawable.triangle_up_green
             }
             value < 0 -> {
-                R.color.darkRed
+                R.color.darkRed to R.drawable.triangle_down_red
             }
-            else -> R.color.darkerGray
-        }
-        return ContextCompat.getColor(context, colorResource)
+            else -> R.color.darkerGray to 0
+        }.let { ContextCompat.getColor(context, it.first) to it.second }
     }
 }

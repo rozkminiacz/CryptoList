@@ -14,11 +14,13 @@ import androidx.databinding.InverseBindingAdapter
 import androidx.databinding.InverseBindingListener
 import org.joda.time.DateTime
 import org.joda.time.format.DateTimeFormat
-import tech.michalik.cryptolist.SpinnerExtensions.getSpinnerValue
-import tech.michalik.cryptolist.SpinnerExtensions.setSpinnerEntries
-import tech.michalik.cryptolist.SpinnerExtensions.setSpinnerInverseBindingListener
-import tech.michalik.cryptolist.SpinnerExtensions.setSpinnerValue
-import java.time.format.DateTimeFormatter
+import tech.michalik.cryptolist.ChangeIndicationTextView
+import tech.michalik.cryptolist.CurrencyDisplayable
+import tech.michalik.cryptolist.CurrencyList
+import tech.michalik.cryptolist.binding.SpinnerExtensions.getSpinnerValue
+import tech.michalik.cryptolist.binding.SpinnerExtensions.setSpinnerEntries
+import tech.michalik.cryptolist.binding.SpinnerExtensions.setSpinnerInverseBindingListener
+import tech.michalik.cryptolist.binding.SpinnerExtensions.setSpinnerValue
 
 /**
  * Created by jaroslawmichalik on 18/02/2020
